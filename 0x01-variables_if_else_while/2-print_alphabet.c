@@ -10,11 +10,12 @@ int main(void)
 
 	int z;
 
-	for (z = 0; z < 26; i++);
+	for (z = 0; z < 26; z++);
 	{
 	putchar(alp[z]);
 	}
 
 	putchar("\n");
+
 	return (0);
 }

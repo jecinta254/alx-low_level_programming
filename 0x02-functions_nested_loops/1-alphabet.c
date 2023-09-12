@@ -5,10 +5,11 @@
  */
 void print_alphabet(void)
 {
-	char[26]="abcdefghijklmnopqrstuvwxyz"
+	char n;
+
+	for (n = 'a' ; n <= 'z' ; n++);
 	{
-		_putchar("abcdefghijklmnopqrstuvwxyz")
+		_putchar(n);
 	}
 	_putchar('\n');
-	return (0);
 }

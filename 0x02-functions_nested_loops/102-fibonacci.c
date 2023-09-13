@@ -9,6 +9,7 @@ int main(void)
 	unsigned long int A2 = 2;
 	unsigned long int a;
 	int b;
+
 	printf("%lu, ", A1);
 	for (b = 1 ; b < 50 ; b++)
 	{

@@ -9,6 +9,7 @@ int main(void)
 	unsigned long int A2 = 2;
 	int a;
 	int b;
+	
 	printf("%lu, ", A1);
 	for (b = 1 ; b < 50 ; b++)
 	{
@@ -16,6 +17,8 @@ int main(void)
 		a = A1 + A2;
 		A1 = A2;
 		A2 = a;
+		if (b != 49)
+			printf(", ");
 	}
 	printf("\n");
 	return (0);

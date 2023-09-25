@@ -15,3 +15,4 @@ void print_chessboard(char (*a)[8])
 			_putchar(a[p][q]);
 		_putchar('\n');
 	}
+}

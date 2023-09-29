@@ -10,8 +10,7 @@
  */
 int check_num(char *str)
 {
-	/*Declaring variabl
-	 * es*/
+	/*Declaring variables*/
 	unsigned int count;
 
 	count = 0;

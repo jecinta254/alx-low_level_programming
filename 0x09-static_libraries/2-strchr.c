@@ -1,8 +1,8 @@
 #include "main.h"
 /**
- * _strchr - Entry Point Function.
- * @s: Input fuction.
- * @c: Input function.
+ * _strchr - Entry point parameter.
+ * @s: input value.
+ * @c: input value.
  * Return: Always 0 (Success)
  */
 char *_strchr(char *s, char c)

@@ -1,8 +1,8 @@
 #include "main.h"
-
+		
 /**
  * _isdigit - A Function that checks for a digit (0 through 9)
- * @c: int to be checked input.
+ * @c: Int to be checked input.
  * Return: 1 if c is a digit, 0 otherwise
  */
 int _isdigit(int c)

@@ -1,8 +1,8 @@
 #include "main.h"
 /**
  * _strspn - Entry point parameter.
- * @s: input value.
- * @accept: input value.
+ * @s: Input Value.
+ * @accept: Input Value.
  * Return: Always 0 (Success)
  */
 unsigned int _strspn(char *s, char *accept)

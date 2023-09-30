@@ -2,8 +2,8 @@
 /**
  * _strpbrk - Entry point
  * @s: Input Value.
- * @accept: Input Value
- * Return: Always 0 (Success)
+ * @accept: Input Value.
+ * Return: Return 0
  */
 char *_strpbrk(char *s, char *accept)
 {

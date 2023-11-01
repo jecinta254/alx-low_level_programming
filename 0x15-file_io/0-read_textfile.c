@@ -9,31 +9,17 @@
 
 ssize_t read_textfile(const char *filename, size_t letters)
 {
-	int our_file,
-	ssize_t lrnr, lenw;
-	char *buffer;
+int our_file;
+ssize_t byts;
+char buf[READ_BUF_SIZE * 8];
 
-	if (filename == NULL)
-		return (0);
-	our_file = open(filename, O_RDONLY);
-	if (our_file == -1)
-		return (0);
-	buffer = malloc(sizeof(char) * letters);
-	if (buffer == NULL)
-	{
-		close(our_file);
-		return (0);
-	}
-	lenr = read(our_file, buffer, letters);
-	close(our_file);
-	if (lenr == -1)
-	{
-		free(buffer);
-		return (0);
-	}
-	lenw = write(STDOUT_FILENO, buffer, lenr);
-	free(buffer);
-	if (lenr != lenw)
-		return (0);
-	return (lenw);
+if (!filename || !letters)
+	return (0);
+our_file = open(filename, O_RDONLY);
+if (our_file == -1)
+	return (0);
+byts = read(our_file, &buf[0], letters);
+byts = write(STDOUT_FILENO, &buf[0], byts);
+close(our_file);
+return (byts);
 }

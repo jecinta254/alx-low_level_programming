@@ -1,38 +1,40 @@
 #include "main.h"
 
-/*
- * append_text_to_file - a function that appends text at the end of a file.
- * @filename: filename output
- * text_content: content
- * Return: 1 success -1 fail
+/**
+ * _strlen2 - This will count number of characters in a string
+ * @s: Our string
+ * Return: String length.
  */
+size_t _strlen2(char *s)
+{
+	size_t x;
 
+	x = 0;
+	while (s[x])
+		x++;
+	return (x);
+}
+
+/**
+ * append_text_to_file - program that appends text at the end of a file.
+ * @filename: The file's name
+ * @text_content: what is to be added at the end of file.
+ * Return: 1 (Success) and -1 (Failure)
+ */
 int append_text_to_file(const char *filename, char *text_content)
-
 {
 	int our_file;
-	int nletters;
-	int rwr;
 
 	if (!filename)
 		return (-1);
 
-	our_file = open(filename, O_WRONGLY | O_APPEND);
-
-	if (our_file == -1)
+	our_file = open(filename, O_RDWR | O_APPEND);
+	if (our_file < 0)
 		return (-1);
 
 	if (text_content)
-	{
-		for (nletters = 0; text_content[nletters]; nletters++)
-			;
-
-	rwr = write(our_file, text_content, nletters);
-
-	if (rwr == -1)
-		return (-1);
-	}
+		if (write(our_file, text_content, _strlen2(text_content)) < 0)
+			return (-1);
 	close(our_file);
-
 	return (1);
 }

@@ -11,6 +11,8 @@
 #include <stdarg.h>
 #include <elf.h>
 
+#define READ_BUF_SIZE 1024
+
 #define handle_error(msg) \
     do { perror(msg); exit(EXIT_FAILURE); } while (0)
 ssize_t read_textfile(const char *filename, size_t letters);

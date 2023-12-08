@@ -1,10 +1,10 @@
 #include "lists.h"
 
 /**
- * print_dlistint - prints all the elements of a task
+ * print_dlistint - prints elements of a task
  * dlistint_t list
- *
- * @h: head of the list
+ * input
+ * @h: head of the list input
  * Return: the number of nodes
  */
 size_t print_dlistint(const dlistint_t *h)
